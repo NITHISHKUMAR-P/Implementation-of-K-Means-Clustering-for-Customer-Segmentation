@@ -29,7 +29,7 @@ data.head()
 data.info()
 data.isnull().sum()
 from sklearn.cluster import KMeans
-wcss = []
+wcss = [] #WCSS stands for Withitn Cluster Sum of Square. It is sum of squared distance each point and centroid in the cluster.
 for i in range(1,11):
     kmeans = KMeans(n_clusters = i,init = "k-means++")
     kmeans.fit(data.iloc[:,3:])
